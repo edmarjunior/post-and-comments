@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Post from './Post';
+import Post from '../Post/Post';
+import { Container } from './styles';
 
-import edmarImg from '../assets/edmar.jpg';
-import tabataImg from '../assets/tabata.jpg';
-import brunoImg from '../assets/bruno.jpg';
-import joaoImg from '../assets/joao.jpg';
+import edmarImg from '../../assets/edmar.jpg';
+import tabataImg from '../../assets/tabata.jpg';
+import brunoImg from '../../assets/bruno.jpg';
+import joaoImg from '../../assets/joao.jpg';
 
 class PostList extends Component {
     state = {
@@ -130,9 +131,9 @@ class PostList extends Component {
 
     render() {
         return (
-            <div class="postContainer">
+            <Container>
                 {this.state.posts.map(post => <Post key={post.id} post={post} />)}
-            </div>
+            </Container>
         );
     }
 
